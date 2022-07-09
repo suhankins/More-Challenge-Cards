@@ -1,0 +1,16 @@
+<table name="Expanded Challenge Cards"
+		author="Punished Bernadetta"
+		color="Color('bf204b')"
+		description="It is possible in the vanilla game anyways"
+		cannot_be_disabled="false"
+		early_init="false">
+    <hooks>
+		<hook source_file="lib/tweak_data/challengecardstweakdata" file="challengecardstweakdata.lua"/>
+		<hook source_file="lib/managers/buffeffectmanager" file="buffeffectmanager.lua"/>
+		<hook source_file="lib/managers/localizationmanager" file="localizationmanager.lua"/>
+    </hooks>
+	<!--<auto_updates
+        provider="modworkshop"
+        id=""
+		version="1.0"/>-->
+</table>
