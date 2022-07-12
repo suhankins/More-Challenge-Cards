@@ -11,7 +11,7 @@ Hooks:PostHook(ChallengeCardsTweakData, "init", "expanded_challenge_cards_init",
                 name = BuffEffectManager.EFFECT_EXPLOSIVE_HEADSHOTS
             },
             {
-                value = 5,
+                value = 0.05,
                 type = ChallengeCardsTweakData.EFFECT_TYPE_NEGATIVE,
                 name = BuffEffectManager.EFFECT_DAMAGE_ON_MISS
             }
@@ -20,7 +20,10 @@ Hooks:PostHook(ChallengeCardsTweakData, "init", "expanded_challenge_cards_init",
             desc_id = "effect_explosive_headshots"
         },
         negative_description = {
-            desc_id = "effect_damage_on_miss"
+            desc_id = "effect_damage_on_miss",
+            desc_params = {
+                EFFECT_VALUE_1 = "5%"
+            }
         },
         rarity = LootDropTweakData.RARITY_RARE,
         card_type = ChallengeCardsTweakData.CARD_TYPE_RAID,
