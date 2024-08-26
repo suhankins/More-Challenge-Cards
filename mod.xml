@@ -7,10 +7,8 @@
     <hooks>
 		<hook source_file="lib/tweak_data/challengecardstweakdata" file="challengecardstweakdata.lua"/>
 		<hook source_file="lib/managers/buffeffectmanager" file="buffeffectmanager.lua"/>
-		<hook source_file="lib/managers/localizationmanager" file="localizationmanager.lua"/>
     </hooks>
-	<!--<auto_updates
-        provider="modworkshop"
-        id=""
-		version="1.0"/>-->
+	<localization directory="loc" default="english.json">
+		<loc file="english.json" language="english"/>
+	</localization>
 </table>
