@@ -1,0 +1,20 @@
+{
+    "Lua.diagnostics.globals": [
+        "ChallengeCardsTweakData",
+        "LootDropTweakData",
+        "BuffEffectManager",
+        "ModPath",
+        "DB",
+        "Hooks",
+        "ModuleBase",
+        "class",
+        "log",
+        "RequiredScript",
+        "CopDamage",
+        "managers",
+        "ProjectileBase",
+        "Network",
+        "RaycastWeaponBase",
+        "PlayerDamage"
+    ]
+}

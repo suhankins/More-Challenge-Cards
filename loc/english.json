@@ -1,5 +1,5 @@
 {
     "ra_mind_blowing_name_id": "Mind Blowing",
     "effect_explosive_headshots": "Enemies explode on headshot",
-    "effect_damage_on_miss": "$EFFECT_VALUE_1; damage to player on missing their shot"
+    "effect_damage_on_miss": "$EFFECT_VALUE_1; damage to player on missed shot"
 }
