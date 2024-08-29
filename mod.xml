@@ -5,15 +5,10 @@
 		cannot_be_disabled="false"
 		early_init="false">
     <hooks>
-		<hook source_file="lib/managers/buffeffectmanager" file="effects/heal_on_miss.lua"/>
-		<hook source_file="lib/units/weapons/raycastweaponbase" file="effects/heal_on_miss.lua"/>
-		
 		<hook source_file="lib/managers/buffeffectmanager" file="effects/explosive_headshots.lua"/>
 		<hook source_file="lib/units/enemies/cop/copdamage" file="effects/explosive_headshots.lua"/>
 
 		<hook source_file="lib/tweak_data/challengecardstweakdata" file="cards/mind_blowing.lua"/>
-
-		<hook source_file="lib/managers/buffeffectmanager" file="debug.lua" />
     </hooks>
 	<localization directory="loc" default="english.json">
 		<loc file="english.json" language="english"/>

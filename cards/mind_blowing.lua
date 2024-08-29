@@ -1,7 +1,6 @@
 DB:create_entry("texture", "ui/challenge_cards/cc_raid_rare_mind_blowing", ModPath .. "assets/cc_raid_rare_mind_blowing.dds")
 
 Hooks:PostHook(ChallengeCardsTweakData, "init", "more_challenge_cards_ChallengeCardsTweakData_init_mind_blowing", function(self, tweak_data)
-    BuffEffectManager.EFFECT_HEAL_ON_MISS = "heal_on_miss"
     BuffEffectManager.EFFECT_EXPLOSIVE_HEADSHOTS = "explosive_headshots"
 
     self.cards.ra_mind_blowing = {
@@ -14,18 +13,23 @@ Hooks:PostHook(ChallengeCardsTweakData, "init", "more_challenge_cards_ChallengeC
                 name = BuffEffectManager.EFFECT_EXPLOSIVE_HEADSHOTS
             },
             {
-                value = -0.03,
+                value = 0.25,
                 type = ChallengeCardsTweakData.EFFECT_TYPE_NEGATIVE,
-                name = BuffEffectManager.EFFECT_HEAL_ON_MISS
+                name = BuffEffectManager.EFFECT_ENEMIES_RECEIVE_DAMAGE
+            },
+            {
+                value = 4.0,
+                type = ChallengeCardsTweakData.EFFECT_TYPE_POSITIVE,
+                name = BuffEffectManager.EFFECT_PLAYER_HEADSHOT_DAMAGE
             }
         },
         positive_description = {
             desc_id = "effect_explosive_headshots"
         },
         negative_description = {
-            desc_id = "effect_damage_on_miss",
+            desc_id = "effect_less_bodyshot_damage",
             desc_params = {
-                EFFECT_VALUE_1 = "3%"
+                EFFECT_VALUE_1 = "75%"
             }
         },
         rarity = LootDropTweakData.RARITY_RARE,
