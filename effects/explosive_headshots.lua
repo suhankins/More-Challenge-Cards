@@ -1,16 +1,16 @@
 if RequiredScript == 'lib/managers/buffeffectmanager' then
     BuffEffectManager.EFFECT_EXPLOSIVE_HEADSHOTS = "explosive_headshots"
 elseif RequiredScript == 'lib/units/enemies/cop/copdamage' then
-    local was_alive_before = false
+    local was_dead_already = false
     Hooks:PreHook(CopDamage, "damage_bullet", "more_challenge_cards_CopDamage_damage_bullet_explosive_headshots_prehook", function(self, attack_data)
-        was_alive_before = self._dead
+        was_dead_already = self._dead
     end)
     Hooks:PostHook(CopDamage, "damage_bullet", "more_challenge_cards_CopDamage_damage_bullet_explosive_headshots", function(self, attack_data)
         if not managers.buff_effect:is_effect_active(BuffEffectManager.EFFECT_EXPLOSIVE_HEADSHOTS) then
             return
         end
 
-        if (self._dead and not was_alive_before) or self._invulnerable then
+        if (self._dead and was_dead_already) or self._invulnerable then
             return
         end
 
